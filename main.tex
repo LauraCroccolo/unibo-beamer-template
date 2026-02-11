@@ -1,0 +1,98 @@
+%author: Laura Croccolo, Phd Cadidate in Finance, Disa-Bologna University. contact info: laura.croccolo@unibo.it
+
+\documentclass{beamer}
+\usepackage[scaled]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\definecolor{UniboRed}{RGB}{200,16,46}   
+\definecolor{GrayText}{RGB}{100,100,100}  % Gray for regular text
+\definecolor{BoldGrayText}{RGB}{80,80,80} % Darker gray for bold text
+% Font and color settings
+\usecolortheme{default}
+\usefonttheme{professionalfonts}
+\setbeamertemplate{navigation symbols}{}
+% Logo and title slide formatting
+\usepackage{graphicx}
+\usepackage{tikz}
+% Title slide setup
+\setbeamertemplate{title page}{
+    \begin{minipage}[c][\paperheight]{0.3\linewidth} 
+        \centering
+        \vspace{0cm} 
+        \includegraphics[width=1\linewidth]{logo.png} 
+    \end{minipage}
+    \hfill
+    % Vertical line
+    \begin{minipage}[c][\paperheight]{0.01\linewidth}
+        \vspace{0cm} % No vertical offset
+        \textcolor{GrayText}{\rule{0.1mm}{9cm}} % Thin gray vertical line
+    \end{minipage}
+    \hfill
+    % Right side with title and author
+    \begin{minipage}[c][\paperheight]{0.6\linewidth} 
+        \vspace{0cm}
+        \textcolor{BoldGrayText}{\large \textbf{Title of the presentation}}\\[1cm]
+        \textcolor{GrayText}{\small \textbf{Name Surname,} \textbf{Position}}\\[0.5cm]
+        \textcolor{GrayText}{\small Department - Bologna University}
+    \end{minipage}
+}
+
+% Footer with slide number and mini logo
+\setbeamertemplate{footline}{%
+    \begin{tikzpicture}[remember picture, overlay]
+        % Slide number in bottom-left
+        \node[anchor=south west, yshift=0.1cm, xshift=0.1cm] at (current page.south west) {\color{GrayText}\tiny \insertframenumber}; 
+        % Mini logo in bottom-right
+        \node[anchor=south east, yshift=0.1cm, xshift=-0.2cm] at (current page.south east) {\includegraphics[height=1cm]{logo.png}};
+    \end{tikzpicture}%
+}
+
+
+\definecolor{UniboRed}{RGB}{160, 0, 0} 
+\setbeamercolor{frametitle}{fg=UniboRed} % Use the same red color
+\setbeamertemplate{frametitle}{
+    \vspace{0.3cm} % Adjust vertical spacing if necessary
+    \textcolor{UniboRed}{\small\textbf{\insertframetitle}}
+}
+\setbeamertemplate{frametitle}{
+    \vspace{0.3cm} % Adjust vertical spacing if necessary
+    \textcolor{UniboRed}{\small \textbf{\insertframetitle}} 
+}
+
+\begin{document}
+
+% Title slide (slide 1)
+\begin{frame}[plain]
+    \titlepage
+\end{frame}
+
+% Example slide (slide 2 and onwards)
+\begin{frame}
+    \frametitle{Click here to modify the slide title}
+    \vspace{-0.2cm}
+    \textcolor{BlackText}{\footnotesize Click here to write the main text.}
+\end{frame}
+
+
+
+% Last Slide 
+\begin{frame}[plain]
+    \centering
+    
+    \vspace{0cm}
+    \includegraphics[width=0.3\linewidth]{logo.png} 
+
+    \vspace{1cm} 
+
+    {\textcolor{BoldGrayText}{\textbf{Name Surname}}}\\[0.5cm]
+
+    {\textcolor{GrayText}{\small Department - Bologna University}}\\[0.9cm]
+
+    {\textcolor{GrayText}{\footnotesize \uline{name.surname@unibo.it}}}\\[1.5cm]
+
+
+    \vfill
+    {\textcolor{BlackText}{\footnotesize www.unibo.it}}
+
+\end{frame}
+
+\end{document}
